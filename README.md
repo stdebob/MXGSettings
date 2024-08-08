@@ -1,4 +1,4 @@
-<img src="/imgs/icon.png" width="160" height="160" style="display: block; margin: 0 auto;" alt="icon">
+<img src="/imgs/MXG.png" width="160" height="160" style="display: block; margin: 0 auto;" alt="icon">
 
 <div align="center">
 
