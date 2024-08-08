@@ -241,5 +241,5 @@ dependencies {
     implementation(files(roots["springback"]))
     implementation(files(roots["external"]))
 
-    implementation(files("libs/hyperceiler_expansion_packs-debug.aar"))
+    implementation(files("libs/expansion_packs-debug.aar"))
 }
