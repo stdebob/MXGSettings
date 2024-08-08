@@ -1,10 +1,7 @@
-<div style="display: flex; align-items: center;">
-  <img src="/imgs/MXG.png" alt="icon" width="160" height="160" style="margin-right: 20px;">
-  <div>
-    <h1>MXGSettings</h1>
-    <p>A settings that contains goodies. Originally from HyperCeiler and others.</p>
-  </div>
-</div>
+| [Image] | Text Content |
+|---|---|
+| <img src="/imgs/MXG.png" width="160" height="160" alt="icon"> | # MXGSettings <br> A settings that contains goodies. Originally from HyperCeiler and others. |
+
 ## Currently supported versions
 
 MIUI and HyperOS for Android 13-14
