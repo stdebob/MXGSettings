@@ -1,18 +1,18 @@
--keep class com.sevtinge.hyperceiler.XposedInit
--keep class com.sevtinge.hyperceiler.module.skip.SystemFrameworkForCorePatch
--keep class com.sevtinge.hyperceiler.ui.LauncherActivity
--keep class com.sevtinge.hyperceiler.utils.blur.*
--keep class com.sevtinge.hyperceiler.utils.Helpers { boolean isModuleActive; }
--keep class com.sevtinge.hyperceiler.utils.Helpers { int XposedVersion; }
+-keep class com.mxg.settings.XposedInit
+-keep class com.mxg.settings.module.skip.SystemFrameworkForCorePatch
+-keep class com.mxg.settings.ui.LauncherActivity
+-keep class com.mxg.settings.utils.blur.*
+-keep class com.mxg.settings.utils.Helpers { boolean isModuleActive; }
+-keep class com.mxg.settings.utils.Helpers { int XposedVersion; }
 -keep class moralnorm.**{ *; }
 -keep class org.luckypray.dexkit.*
--keep class * extends com.sevtinge.hyperceiler.ui.fragment.base.*
--keep class * extends com.sevtinge.hyperceiler.module.base.BaseHook { <init>(); }
--keep class com.sevtinge.hyperceiler.module.base.dexkit.**{ *; }
--keep class * extends com.sevtinge.hyperceiler.module.base.BaseModule
--keep class com.sevtinge.hyperceiler.module.base.BaseModule { *; }
-#-keep class com.sevtinge.hyperceiler.utils.XposedUtils { *; }
--keep class com.sevtinge.hyperceiler.utils.api.miuiStringToast.res.** { *; }
+-keep class * extends com.mxg.settings.ui.fragment.base.*
+-keep class * extends com.mxg.settings.module.base.BaseHook { <init>(); }
+-keep class com.mxg.settings.module.base.dexkit.**{ *; }
+-keep class * extends com.mxg.settings.module.base.BaseModule
+-keep class com.mxg.settings.module.base.BaseModule { *; }
+#-keep class com.mxg.settings.utils.XposedUtils { *; }
+-keep class com.mxg.settings.utils.api.miuiStringToast.res.** { *; }
 
 -dontwarn android.app.ActivityTaskManager$RootTaskInfo
 -dontwarn miui.app.MiuiFreeFormManager$MiuiFreeFormStackInfo

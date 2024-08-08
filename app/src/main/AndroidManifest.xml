@@ -133,7 +133,7 @@
 
         <provider
             android:name=".provider.SharedPrefsProvider"
-            android:authorities="com.sevtinge.hyperceiler.provider.sharedprefs"
+            android:authorities="com.mxg.settings.provider.sharedprefs"
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
             android:exported="true"
@@ -163,11 +163,11 @@
             android:resource="@array/xposed_scope" />
 
         <service
-            android:name="com.sevtinge.hyperceiler.safe.CrashService"
+            android:name="com.mxg.settings.safe.CrashService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.sevtinge.hyperceiler.crash.Service" />
+                <action android:name="com.mxg.settings.crash.Service" />
             </intent-filter>
         </service>
 

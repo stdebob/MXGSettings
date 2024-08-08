@@ -72,7 +72,7 @@ fun loadPropertiesFromFile(fileName: String): Properties? {
 }
 
 android {
-    namespace = "com.sevtinge.hyperceiler"
+    namespace = "com.mxg.settings"
     compileSdk = 35
     buildToolsVersion = "35.0.0"
 
