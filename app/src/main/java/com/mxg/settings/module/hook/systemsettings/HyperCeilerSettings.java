@@ -1,21 +1,4 @@
-/*
- * This file is part of HyperCeiler.
-
- * HyperCeiler is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License as
- * published by the Free Software Foundation, either version 3 of the
- * License.
-
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Affero General Public License for more details.
-
- * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
- * Copyright (C) 2023-2024 HyperCeiler Contributions
- */
+// this file is a part of MxGSettings. if you kang it w/o permission, or you don't credit, you're COOKED. T-T _/\_
 package com.mxg.settings.module.hook.systemsettings;
 
 import static com.mxg.settings.module.base.tool.OtherTool.getModuleRes;
@@ -44,8 +27,6 @@ public class HyperCeilerSettings extends BaseHook {
     private int settingsIconResId;
 
     private Class<?> mPreferenceHeader;
-
-    int mIconModeInt = mPrefsMap.getStringAsInt("settings_icon_mode", 0);
 
     @Override
     public void init() {
@@ -92,13 +73,7 @@ public class HyperCeilerSettings extends BaseHook {
                 for (Object head : headers) {
                     position++;
                     long id = XposedHelpers.getLongField(head, "id");
-                    if (opt == 1 && id == -1) {
-                        headers.add(position - 1, header);
-                    } else if (opt == 2 && id == themes) {
-                        headers.add(position, header);
-                    } else if (opt == 3 && id == (Integer.parseInt(Build.getMiuiVersionCode()) < 14 ? special : timer)) {
-                        headers.add(position, header);
-                    }
+                    headers.add(position - 1, header);
                 }
                 if (headers.size() > 25) {
                     headers.add(25, header);
@@ -111,10 +86,10 @@ public class HyperCeilerSettings extends BaseHook {
 
 
     private void addIconResource() {
-        if (mIconModeInt == 0) {
-            settingsIconResId = R.drawable.ic_hyperceiler_settings_v140;
-        } else {
+        if (Integer.parseInt(Build.getMiuiVersionCode()) < 816) {
             settingsIconResId = R.drawable.ic_hyperceiler_settings_v130;
+        } else {
+            settingsIconResId = R.drawable.ic_hyperceiler_settings_v140;
         }
     }
 }
