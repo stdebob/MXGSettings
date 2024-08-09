@@ -47,8 +47,6 @@ public class TipsPreference extends Preference {
             InputStream inputStream;
             try {
                 inputStream = assetManager.open(fileName);
-            } catch (IOException ex) {
-                inputStream = assetManager.open("tips/tips");
             }
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
