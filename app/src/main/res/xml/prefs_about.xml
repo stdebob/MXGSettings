@@ -107,8 +107,8 @@
         </Preference>
 
         <Preference
-            android:summary="@string/about_hc_desc"
-            android:title="@string/about_hc">
+            android:summary="@string/about_bomb_desc"
+            android:title="@string/about_bomb">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/stdebob/MxGSettings" />

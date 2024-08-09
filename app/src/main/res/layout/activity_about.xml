@@ -10,7 +10,7 @@
     android:paddingVertical="30dp">
 
     <ImageView
-        android:background="@drawable/ic_mxgsettings_hos"
+        android:background="@drawable/ic_mxgsettingssettings_hos"
         android:layout_width="100dp"
         android:layout_height="100dp" />
 

@@ -26,7 +26,7 @@
         android:title="PreferenceCategory" />
 
     <com.mxg.settings.prefs.PreferenceHeader
-        android:icon="@drawable/ic_mxgsettings_hos"
+        android:icon="@drawable/ic_mxgsettingssettings_hos"
         android:title="PreferenceHeader" />
 
     <SeekBarPreference

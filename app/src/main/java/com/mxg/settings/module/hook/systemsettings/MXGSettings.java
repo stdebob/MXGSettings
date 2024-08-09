@@ -87,9 +87,9 @@ public class MxGSettingsSettings extends BaseHook {
 
     private void addIconResource() {
         if (Integer.parseInt(Build.getMiuiVersionCode()) < 816) {
-            settingsIconResId = R.drawable.ic_mxgsettings_miui;
+            settingsIconResId = R.drawable.ic_mxgsettingssettings_miui;
         } else {
-            settingsIconResId = R.drawable.ic_mxgsettings_hos;
+            settingsIconResId = R.drawable.ic_mxgsettingssettings_hos;
         }
     }
 }
