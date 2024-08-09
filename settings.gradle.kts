@@ -18,5 +18,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "HyperCeiler"
+rootProject.name = "MxG Settings"
 include(":app", ":hidden-api")
