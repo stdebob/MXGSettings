@@ -28,7 +28,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mxg.settings.BuildConfig;
 import com.mxg.settings.R;
 import com.mxg.settings.prefs.PreferenceHeader;
-import com.mxg.settings.prefs.TipsPreference;
 import com.mxg.settings.ui.MainActivityContextHelper;
 import com.mxg.settings.ui.fragment.base.SettingsPreferenceFragment;
 import com.mxg.settings.ui.fragment.helper.HomepageEntrance;
@@ -57,7 +56,6 @@ public class MainFragment extends SettingsPreferenceFragment implements Homepage
     Preference mHeadtipNotice;
     Preference mHeadtipHyperCeiler;
     Preference mHelpCantSeeApps;
-    TipsPreference mTips;
     MainActivityContextHelper mainActivityContextHelper;
     Handler mHandler = new Handler() {
         @Override

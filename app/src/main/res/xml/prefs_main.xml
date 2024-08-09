@@ -409,11 +409,4 @@
         </Preference>
     </PreferenceCategory>
 
-    <PreferenceCategory>
-
-        <com.mxg.settings.prefs.TipsPreference
-            android:key="prefs_key_tips" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
