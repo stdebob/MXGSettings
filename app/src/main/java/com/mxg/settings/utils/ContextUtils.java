@@ -24,7 +24,7 @@ public class ContextUtils {
     public @interface Duration {
     }
 
-    private static final String TAG = "[HyperCeiler]";
+    private static final String TAG = "[MxGSettings]";
     // 尝试全部
     public static final int FLAG_ALL = 0;
     // 仅获取当前应用

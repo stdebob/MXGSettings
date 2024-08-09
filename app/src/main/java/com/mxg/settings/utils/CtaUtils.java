@@ -23,14 +23,14 @@ public class CtaUtils {
     private static final String KEY_AGREE_DESC = "agree_desc";
 
     public static void setCtaEnabled(Context context) {
-        SharedPreferences.Editor edit = context.getSharedPreferences("HyperCeiler_Permission", 0).edit();
+        SharedPreferences.Editor edit = context.getSharedPreferences("MxGSettings_Permission", 0).edit();
         edit.putBoolean("key_new_cta_open", true);
         edit.apply();
     }
 
 
     public static boolean isCtaEnabled(Context context) {
-        return context.getSharedPreferences("HyperCeiler_Permission", 0).getBoolean("key_new_cta_open", false);
+        return context.getSharedPreferences("MxGSettings_Permission", 0).getBoolean("key_new_cta_open", false);
     }
 
     public static boolean showCtaDialog(Activity activity, int requestCode) {
@@ -46,8 +46,6 @@ public class CtaUtils {
         intent.putExtra(KEY_OPTIONAL_PERM_DESC, getOptionalPermissionDesc(activity));
         intent.putExtra(KEY_OPTIONAL_PERM_SHOW, false);
         intent.putExtra(KEY_AGREE_DESC, activity.getResources().getString(R.string.new_cta_agree_desc));
-        intent.putExtra("user_agreement", "https://hyperceiler.sevtinge.cc/Protocol");
-        intent.putExtra("privacy_policy", "https://hyperceiler.sevtinge.cc/Privacy");
         intent.putExtra(KEY_USE_NETWORK, false);
         intent.putExtra(KEY_SHOW_LOCK, false);
         try {

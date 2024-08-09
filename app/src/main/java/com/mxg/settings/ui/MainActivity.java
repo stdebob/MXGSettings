@@ -67,7 +67,7 @@ public class MainActivity extends NavigationActivity implements IResult {
                     .show());
         }
         ShellInit.init(this);
-        PropUtils.setProp("persist.hyperceiler.log.level", ProjectApi.isCanary() ? (def != 3 && def != 4 ? 3 : def) : def);
+        PropUtils.setProp("persist.mxg.log.level", ProjectApi.isCanary() ? (def != 3 && def != 4 ? 3 : def) : def);
         appCrash = CrashData.toPkgList();
         handler.postDelayed(() -> {
             if (haveCrashReport()) {
@@ -101,7 +101,7 @@ public class MainActivity extends NavigationActivity implements IResult {
                         .setHapticFeedbackEnabled(true)
                         .setCancelable(false)
                         .setPositiveButton(R.string.safe_mode_cancel, (dialog, which) -> {
-                            ShellInit.getShell().run("setprop persist.hyperceiler.crash.report \"\"").sync();
+                            ShellInit.getShell().run("setprop persist.mxg.crash.report \"\"").sync();
                             dialog.dismiss();
                         })
                         .setNegativeButton(R.string.safe_mode_ok, (dialog, which) -> dialog.dismiss())

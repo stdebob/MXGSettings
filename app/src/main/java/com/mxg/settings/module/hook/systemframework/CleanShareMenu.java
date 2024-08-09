@@ -53,7 +53,7 @@ public class CleanShareMenu extends BaseHook {
                     Intent intent = (Intent) origIntent.clone();
                     if (intent.getDataString() != null && intent.getDataString().contains(":"))
                         return;
-                    if (intent.hasExtra("HyperCeiler") && intent.getBooleanExtra("HyperCeiler", false))
+                    if (intent.hasExtra("MxGSettings") && intent.getBooleanExtra("MxGSettings", false))
                         return;
                     Set<String> selectedApps = mPrefsMap.getStringSet("system_framework_clean_share_apps");
                     List<ResolveInfo> resolved = (List<ResolveInfo>) param.getResult();

@@ -21,7 +21,7 @@ public class CorePatchForU extends CorePatchForT {
             try {
                 deoptimizeMethod(utilClass, "reconcilePackages");
             } catch (Throwable e) {
-                XposedBridge.log("[HyperCeiler][E][android]" + TAG + ": deoptimizing failed" + Log.getStackTraceString(e));
+                XposedBridge.log("[MxGSettings][E][android]" + TAG + ": deoptimizing failed" + Log.getStackTraceString(e));
             }
         }
 

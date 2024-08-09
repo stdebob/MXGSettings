@@ -1,11 +1,11 @@
 <resources>
 
-    <style name="Base.Theme.HyperCeiler.DayNight" parent="Base.Theme.HyperCeiler">
+    <style name="Base.Theme.MxGSettings.DayNight" parent="Base.Theme.MxGSettings">
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
-    <style name="Base.Theme.HyperCeiler" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="Base.Theme.MxGSettings" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="android:forceDarkAllowed">false</item>
         <item name="rebootIconColor">@color/white</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Dark</item>

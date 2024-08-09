@@ -55,7 +55,6 @@ public class MainFragment extends SettingsPreferenceFragment implements Homepage
     Preference mGuardProvider;
     Preference mHeadtipWarn;
     Preference mHeadtipNotice;
-    Preference mHeadtipBirthday;
     Preference mHeadtipHyperCeiler;
     Preference mHelpCantSeeApps;
     TipsPreference mTips;
@@ -128,8 +127,7 @@ public class MainFragment extends SettingsPreferenceFragment implements Homepage
         mTips = findPreference("prefs_key_tips");
         mHeadtipWarn = findPreference("prefs_key_headtip_warn");
         mHeadtipNotice = findPreference("prefs_key_headtip_notice");
-        mHeadtipBirthday = findPreference("prefs_key_headtip_hyperceiler_birthday");
-        mHeadtipHyperCeiler = findPreference("prefs_key_headtip_hyperceiler");
+        mHeadtipHyperCeiler = findPreference("prefs_key_headtip_mxg");
         mHelpCantSeeApps = findPreference("prefs_key_help_cant_see_app");
 
         mHelpCantSeeApps.setVisible(!getSharedPreferences().getBoolean("prefs_key_help_cant_see_apps_switch", false));
@@ -154,33 +152,9 @@ public class MainFragment extends SettingsPreferenceFragment implements Homepage
 
         mainActivityContextHelper = new MainActivityContextHelper(requireContext());
 
-        isBirthday();
-        isFuckCoolapkSDay();
-        isOfficialRom();
         isLoggerAlive();
-        if (!getIsOfficialRom()) isSignPass();
 
         mTips = findPreference("prefs_key_tips");
-    }
-
-    public void isBirthday() {
-        Calendar calendar = Calendar.getInstance();
-        int currentMonth = calendar.get(Calendar.MONTH);
-        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
-        mHeadtipBirthday.setVisible(currentMonth == Calendar.MAY && currentDay == 1);
-    }
-
-    public void isFuckCoolapkSDay() {
-        Calendar calendar = Calendar.getInstance();
-        int currentMonth = calendar.get(Calendar.MONTH);
-        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
-        mHeadtipHyperCeiler.setVisible(currentMonth == Calendar.JULY && currentDay == 14);
-        mHeadtipHyperCeiler.setTitle(R.string.headtip_tip_fuck_coolapk);
-    }
-
-    public void isOfficialRom() {
-        mHeadtipWarn.setTitle(R.string.headtip_warn_not_offical_rom);
-        mHeadtipWarn.setVisible(getIsOfficialRom());
     }
 
     public void isLoggerAlive() {

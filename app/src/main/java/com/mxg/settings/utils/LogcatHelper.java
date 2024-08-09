@@ -74,7 +74,7 @@ public class LogcatHelper {
         public LogDumper(String pid, String dir) {
             mPID = pid;
             try {
-                out = new FileOutputStream(new File(dir, "HyperCeiler_" + getFileName() + ".log"));
+                out = new FileOutputStream(new File(dir, "MxGSettings_" + getFileName() + ".log"));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }

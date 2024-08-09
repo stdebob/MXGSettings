@@ -362,7 +362,7 @@ object BlurWhenShowShortcutMenu : BaseHook() {
                                  }
                              }
                          } catch (e: Exception) {
-                             XposedBridge.log("HyperCeiler: BlurWhenShowShortcutMenu get mWidgetShortcutMenu failed by: $e")
+                             XposedBridge.log("MxGSettings: BlurWhenShowShortcutMenu get mWidgetShortcutMenu failed by: $e")
                          }*/
                     }
                 })

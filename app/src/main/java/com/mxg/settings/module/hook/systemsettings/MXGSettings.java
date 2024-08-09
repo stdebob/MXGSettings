@@ -22,7 +22,7 @@ import java.util.List;
 import de.robv.android.xposed.XposedHelpers;
 import moralnorm.os.Build;
 
-public class HyperCeilerSettings extends BaseHook {
+public class MxGSettingsSettings extends BaseHook {
 
     private int settingsIconResId;
 
@@ -87,9 +87,9 @@ public class HyperCeilerSettings extends BaseHook {
 
     private void addIconResource() {
         if (Integer.parseInt(Build.getMiuiVersionCode()) < 816) {
-            settingsIconResId = R.drawable.ic_hyperceiler_settings_v130;
+            settingsIconResId = R.drawable.ic_mxgsettings_miui;
         } else {
-            settingsIconResId = R.drawable.ic_hyperceiler_settings_v140;
+            settingsIconResId = R.drawable.ic_mxgsettings_hos;
         }
     }
 }

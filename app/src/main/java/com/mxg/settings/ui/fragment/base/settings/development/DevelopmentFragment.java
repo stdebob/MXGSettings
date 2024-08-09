@@ -73,7 +73,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment implements P
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.edit_dialog, null);
         EditText input = view.findViewById(R.id.title);
         new AlertDialog.Builder(getActivity())
-                .setTitle("# root@HyperCeiler > Input")
+                .setTitle("# root@MxGSettings > Input")
                 .setView(view)
                 .setCancelable(false)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
@@ -93,7 +93,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment implements P
     private void showOutDialog(String show) {
         new AlertDialog.Builder(getActivity())
                 .setCancelable(false)
-                .setTitle("# root@HyperCeiler > Output")
+                .setTitle("# root@MxGSettings > Output")
                 .setMessage(show)
                 .setPositiveButton(android.R.string.ok, null)
                 .show();

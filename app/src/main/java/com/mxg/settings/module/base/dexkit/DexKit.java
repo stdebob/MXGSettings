@@ -447,7 +447,7 @@ public class DexKit {
     }
 
     private static void throwRuntime(String msg) {
-        throw new RuntimeException("[HyperCeiler][E][" + callTAG + "]: " + msg);
+        throw new RuntimeException("[MxGSettings][E][" + callTAG + "]: " + msg);
     }
 
     // 字符串获取为类列表

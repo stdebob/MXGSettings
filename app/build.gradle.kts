@@ -22,7 +22,7 @@ lsparanoid {
     }
 }
 
-val apkId = "HyperCeiler"
+val apkId = "MxGSettings"
 val buildTypes = "release"
 val roots = mapOf(
     "animation" to "libs/animation-${buildTypes}.aar",

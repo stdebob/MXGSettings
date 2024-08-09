@@ -47,7 +47,7 @@ public class CorePatchForR extends XposedHelper implements IXposedHookLoadPackag
         try {
             m = XposedBridge.class.getDeclaredMethod("deoptimizeMethod", Member.class);
         } catch (Throwable t) {
-            XposedBridge.log("[HyperCeiler][E][android]" + TAG + ": " + Log.getStackTraceString(t));
+            XposedBridge.log("[MxGSettings][E][android]" + TAG + ": " + Log.getStackTraceString(t));
         }
         deoptimizeMethod = m;
     }
@@ -57,7 +57,7 @@ public class CorePatchForR extends XposedHelper implements IXposedHookLoadPackag
             if (deoptimizeMethod != null && m.getName().equals(n)) {
                 deoptimizeMethod.invoke(null, m);
                 if (isNotReleaseVersion)
-                    XposedBridge.log("[HyperCeiler][D][android]" + TAG + ": Deoptimized " + m.getName());
+                    XposedBridge.log("[MxGSettings][D][android]" + TAG + ": Deoptimized " + m.getName());
             }
         }
     }
@@ -67,12 +67,12 @@ public class CorePatchForR extends XposedHelper implements IXposedHookLoadPackag
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam loadPackageParam) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         if (isNotReleaseVersion) {
-            XposedBridge.log("[HyperCeiler][D][android]" + TAG + ": downgrade=" + prefs.getBoolean("prefs_key_system_framework_core_patch_downgr", true));
-            XposedBridge.log("[HyperCeiler][D][android]" + TAG + ": authcreak=" + prefs.getBoolean("prefs_key_system_framework_core_patch_auth_creak", true));
-            XposedBridge.log("[HyperCeiler][D][android]" + TAG + ": digestCreak=" + prefs.getBoolean("prefs_key_system_framework_core_patch_digest_creak", true));
-            XposedBridge.log("[HyperCeiler][D][android]" + TAG + ": UsePreSig=" + prefs.getBoolean("prefs_key_system_framework_core_patch_use_pre_signature", false));
-            XposedBridge.log("[HyperCeiler][D][android]" + TAG + ": enhancedMode=" + prefs.getBoolean("prefs_key_system_framework_core_patch_enhanced_mode", false));
-            XposedBridge.log("[HyperCeiler][D][android]" + TAG + " sharedUser=" + prefs.getBoolean("prefs_key_system_framework_core_patch_shared_user", false));
+            XposedBridge.log("[MxGSettings][D][android]" + TAG + ": downgrade=" + prefs.getBoolean("prefs_key_system_framework_core_patch_downgr", true));
+            XposedBridge.log("[MxGSettings][D][android]" + TAG + ": authcreak=" + prefs.getBoolean("prefs_key_system_framework_core_patch_auth_creak", true));
+            XposedBridge.log("[MxGSettings][D][android]" + TAG + ": digestCreak=" + prefs.getBoolean("prefs_key_system_framework_core_patch_digest_creak", true));
+            XposedBridge.log("[MxGSettings][D][android]" + TAG + ": UsePreSig=" + prefs.getBoolean("prefs_key_system_framework_core_patch_use_pre_signature", false));
+            XposedBridge.log("[MxGSettings][D][android]" + TAG + ": enhancedMode=" + prefs.getBoolean("prefs_key_system_framework_core_patch_enhanced_mode", false));
+            XposedBridge.log("[MxGSettings][D][android]" + TAG + " sharedUser=" + prefs.getBoolean("prefs_key_system_framework_core_patch_shared_user", false));
         }
 
         var pmService = findClassIfExists("com.android.server.pm.PackageManagerService",
@@ -163,7 +163,7 @@ public class CorePatchForR extends XposedHelper implements IXposedHookLoadPackag
                             if (prefs.getBoolean("prefs_key_system_framework_core_patch_use_pre_signature", false)) {
                                 PackageManager PM = AndroidAppHelper.currentApplication().getPackageManager();
                                 if (PM == null) {
-                                    XposedBridge.log("[HyperCeiler][E][android]" + TAG + ": [" + ProjectApi.mAppModulePkg + "] Cannot get the Package Manager... Are you using MiUI?");
+                                    XposedBridge.log("[MxGSettings][E][android]" + TAG + ": [" + ProjectApi.mAppModulePkg + "] Cannot get the Package Manager... Are you using MiUI?");
                                 } else {
                                     PackageInfo pI;
                                     if (parseErr != null) {
@@ -301,7 +301,7 @@ public class CorePatchForR extends XposedHelper implements IXposedHookLoadPackag
             try {
                 deoptimizeMethod(utilClass, "verifySignatures");
             } catch (Throwable e) {
-                XposedBridge.log("[HyperCeiler][E][android]" + TAG + ": deoptimize failed" + Log.getStackTraceString(e));
+                XposedBridge.log("[MxGSettings][E][android]" + TAG + ": deoptimize failed" + Log.getStackTraceString(e));
             }
         }
 
@@ -381,7 +381,7 @@ public class CorePatchForR extends XposedHelper implements IXposedHookLoadPackag
                         else newSig = SigningDetails_mergeLineageWith(newSig, packageSig);
                     }
                     if (!added || newSig == null) return;
-                    XposedBridge.log("[HyperCeiler][D][android]" + TAG + ": updating signature in sharedUser during add " + toAdd + ": " + param.thisObject);
+                    XposedBridge.log("[MxGSettings][D][android]" + TAG + ": updating signature in sharedUser during add " + toAdd + ": " + param.thisObject);
                     Setting_setSigningDetails(param.thisObject, newSig);
                 }
             }

@@ -73,7 +73,7 @@ public class CleanOpenMenu extends BaseHook {
                     String action = intent.getAction();
                     // XposedBridge.log(action + ": " + intent.getType() + " | " + intent.getDataString());
                     if (!Intent.ACTION_VIEW.equals(action)) return;
-                    if (intent.hasExtra("HyperCeiler") && intent.getBooleanExtra("HyperCeiler", false))
+                    if (intent.hasExtra("MxGSettings") && intent.getBooleanExtra("MxGSettings", false))
                         return;
                     String scheme = intent.getScheme();
                     boolean validSchemes = "http".equals(scheme) || "https".equals(scheme) || "vnd.youtube".equals(scheme);

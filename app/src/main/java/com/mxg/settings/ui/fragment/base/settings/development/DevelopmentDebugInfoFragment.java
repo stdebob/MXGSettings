@@ -120,7 +120,7 @@ public class DevelopmentDebugInfoFragment extends SettingsPreferenceFragment {
         } catch (Exception ignored) {
         }
 
-        StringBuilder debugInfo = new StringBuilder("Debug Info by HyperCeiler");
+        StringBuilder debugInfo = new StringBuilder("Debug Info by MxGSettings");
         debugInfo.append("\n");
         for (Map.Entry<String, String> entry : propertiesModule.entrySet()) {
             debugInfo.append("\n").append(entry.getKey()).append(" = ").append(entry.getValue());

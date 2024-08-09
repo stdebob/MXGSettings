@@ -57,7 +57,7 @@ object DeviceModify : BaseHook() {
             }
             logI("(Updater) dexkit method is $systemPropertiesMethod")
         } catch (e: Throwable) {
-            XposedBridge.log("[HyperCeiler][E][DeviceModify(Updater)]: DeviceModify (Updater) dexkit hook failed by $e")
+            XposedBridge.log("[MxGSettings][E][DeviceModify(Updater)]: DeviceModify (Updater) dexkit hook failed by $e")
         }*/
     }
 }

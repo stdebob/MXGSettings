@@ -1,19 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="AppTheme" parent="Base.Theme.HyperCeiler.DayNight" />
+    <style name="AppTheme" parent="Base.Theme.MxGSettings.DayNight" />
 
-    <style name="Base.Theme.HyperCeiler.DayNight" parent="Base.Theme.HyperCeiler">
+    <style name="Base.Theme.MxGSettings.DayNight" parent="Base.Theme.MxGSettings">
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <style name="Base.Theme.HyperCeiler" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="Base.Theme.MxGSettings" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="rebootIconColor">@color/black</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Light</item>
         <item name="seekBarPreferenceExStyle">@style/Preference.SeekBarPreferenceEx</item>
     </style>
 
-    <style name="Theme.HyperCeiler.Translucent" parent="Base.Theme.HyperCeiler">
+    <style name="Theme.MxGSettings.Translucent" parent="Base.Theme.MxGSettings">
         <item name="android:windowBackground">@color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowTranslucentStatus">true</item>
@@ -23,7 +23,7 @@
         <item name="android:windowExitAnimation">@null</item>
     </style>
 
-    <style name="Theme.HyperCeiler.Translucent.NoActionBar">
+    <style name="Theme.MxGSettings.Translucent.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowActionBarOverlay">false</item>
     </style>

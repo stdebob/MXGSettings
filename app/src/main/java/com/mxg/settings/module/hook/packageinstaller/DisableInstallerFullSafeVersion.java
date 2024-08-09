@@ -1,10 +1,10 @@
-package com.sevtinge.hyperceiler.module.hook.packageinstaller;
+package com.mxg.settings.module.hook.packageinstaller;
 
 import static de.robv.android.xposed.XposedHelpers.setStaticBooleanField;
 
-import com.sevtinge.hyperceiler.module.base.BaseHook;
-import com.sevtinge.hyperceiler.module.base.dexkit.DexKit;
-import com.sevtinge.hyperceiler.module.base.dexkit.IDexKit;
+import com.mxg.settings.module.base.BaseHook;
+import com.mxg.settings.module.base.dexkit.DexKit;
+import com.mxg.settings.module.base.dexkit.IDexKit;
 
 import org.luckypray.dexkit.DexKitBridge;
 import org.luckypray.dexkit.query.FindField;

@@ -40,7 +40,7 @@ public class LogManager {
     }
 
     public static boolean isLoggerAlive() {
-        String tag = "HyperCeilerLogManager";
+        String tag = "MXGLogManager";
         String message = "LOGGER_ALIVE_SYMBOL_" + getSerial();
         int timeout = 5;
         Log.d(tag, message);

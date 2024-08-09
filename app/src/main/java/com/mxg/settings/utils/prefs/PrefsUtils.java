@@ -25,7 +25,7 @@ public class PrefsUtils {
 
     public static String mPrefsPathCurrent = null;
     public static String mPrefsFileCurrent = null;
-    public static String mPrefsName = "hyperceiler_prefs";
+    public static String mPrefsName = "mxg_prefs";
     public static String mPrefsPath = "/data/user_de/0/" + ProjectApi.mAppModulePkg + "/shared_prefs";
     public static String mPrefsFile = mPrefsPath + "/" + mPrefsName + ".xml";
 

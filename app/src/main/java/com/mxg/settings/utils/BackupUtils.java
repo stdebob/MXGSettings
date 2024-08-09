@@ -32,7 +32,7 @@ import java.util.Set;
 public class BackupUtils {
     public static final int CREATE_DOCUMENT_CODE = 255774;
     public static final int OPEN_DOCUMENT_CODE = 277451;
-    public static final String BACKUP_FILE_NAME = "HyperCeiler_settings_backup";
+    public static final String BACKUP_FILE_NAME = "MxGSettings_settings_backup";
 
     public static void backup(Activity activity) {
         @SuppressLint("SimpleDateFormat") String backupFileName = BACKUP_FILE_NAME + new SimpleDateFormat("_yyyy-MM-dd-HH:mm:ss").format(new java.util.Date());

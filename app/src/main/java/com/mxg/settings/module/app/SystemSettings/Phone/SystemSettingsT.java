@@ -15,7 +15,7 @@ import com.mxg.settings.module.hook.systemsettings.DisableInstallUnknownVerify;
 import com.mxg.settings.module.hook.systemsettings.EnableFoldArea;
 import com.mxg.settings.module.hook.systemsettings.EnablePadArea;
 import com.mxg.settings.module.hook.systemsettings.EnableSpeedMode;
-import com.mxg.settings.module.hook.systemsettings.HyperCeilerSettings;
+import com.mxg.settings.module.hook.systemsettings.MXGSettings;
 import com.mxg.settings.module.hook.systemsettings.InternationalBuild;
 import com.mxg.settings.module.hook.systemsettings.LanguageMenuShowAllApps;
 import com.mxg.settings.module.hook.systemsettings.LinkTurbo;
@@ -45,7 +45,7 @@ public class SystemSettingsT extends BaseModule {
 
     @Override
     public void handleLoadPackage() {
-        initHook(new HyperCeilerSettings(), mPrefsMap.getStringAsInt("settings_icon", 0) != 0);
+        initHook(new MXGSettings(), mPrefsMap.getStringAsInt("settings_icon", 0) != 0);
 
         initHook(new ShowAutoUIMode(), mPrefsMap.getBoolean("system_settings_unlock_ui_mode"));
         initHook(new LinkTurbo(), mPrefsMap.getBoolean("system_settings_linkturbo"));

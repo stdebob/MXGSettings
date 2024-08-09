@@ -7,7 +7,7 @@ import com.mxg.settings.utils.PropUtils;
 
 /* 不太建议在非 Xposed 代码使用处调用，虽然已经做了 try 处理，但是 detailLog 将始终为 false
  * 可能因为 <BaseHook.mPrefsMap.getBoolean("settings_disable_detailed_log");>
- * 会导致 <java.lang.NoClassDefFoundError: Failed resolution of: Lcom/sevtinge/hyperceiler/XposedInit;> 等
+ * 会导致 <java.lang.NoClassDefFoundError: Failed resolution of: Lcom/mxg/settings/XposedInit;> 等
  * 日记:
  * 2024/1/3
  * 我我的评价是不要限制这个。
@@ -15,8 +15,8 @@ import com.mxg.settings.utils.PropUtils;
  * 我爱prop。
  * */
 public class AndroidLogUtils {
-    private static final String Tag = "[HyperCeiler]: ";
-    private static final int logLevel = PropUtils.getProp("persist.hyperceiler.log.level", 3);
+    private static final String Tag = "[MxGSettings]: ";
+    private static final int logLevel = PropUtils.getProp("persist.mxg.log.level", 3);
 
     public static void logI(String tag, String msg) {
         if (logLevel < 3) return;

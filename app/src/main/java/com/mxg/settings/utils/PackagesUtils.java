@@ -158,24 +158,24 @@ public class PackagesUtils {
         Intent mainIntent = new Intent();
         mainIntent.setAction(Intent.ACTION_VIEW);
         mainIntent.setDataAndType(Uri.parse("content://" + SharedPrefsProvider.AUTHORITY + "/test/5"), "*/*");
-        mainIntent.putExtra("HyperCeiler", true);
+        mainIntent.putExtra("MxGSettings", true);
         List<ResolveInfo> packs = pm.queryIntentActivities(mainIntent, PackageManager.MATCH_ALL | PackageManager.MATCH_DISABLED_COMPONENTS);
 
         mainIntent = new Intent();
         mainIntent.setAction(Intent.ACTION_VIEW);
         mainIntent.setData(Uri.parse("https://home.miui.com/"));
-        mainIntent.putExtra("HyperCeiler", true);
+        mainIntent.putExtra("MxGSettings", true);
         List<ResolveInfo> packs2 = pm.queryIntentActivities(mainIntent, PackageManager.MATCH_ALL);
 
         mainIntent = new Intent();
         mainIntent.setAction(Intent.ACTION_VIEW);
         mainIntent.setData(Uri.parse("vnd.youtube:n9AcG0glVu4"));
-        mainIntent.putExtra("HyperCeiler", true);
+        mainIntent.putExtra("MxGSettings", true);
         List<ResolveInfo> packs3 = pm.queryIntentActivities(mainIntent, PackageManager.MATCH_ALL);
 
         mainIntent = new Intent();
         mainIntent.setAction(Intent.ACTION_SEND);
-        mainIntent.putExtra(Intent.EXTRA_TEXT, "HyperCeiler is the best!");
+        mainIntent.putExtra(Intent.EXTRA_TEXT, "MxGSettings is the best!");
         mainIntent.setType("*/*");
         List<ResolveInfo> packs4 = pm.queryIntentActivities(mainIntent, PackageManager.MATCH_ALL);
 

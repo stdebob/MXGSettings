@@ -16,7 +16,7 @@ import moralnorm.preference.SwitchPreference;
 
 public class SafeModeFragment extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 
-    String mPkgList = getProp("persist.hyperceiler.crash.report");
+    String mPkgList = getProp("persist.mxg.crash.report");
 
     SwitchPreference mHome;
     SwitchPreference mSettings;
@@ -65,7 +65,7 @@ public class SafeModeFragment extends SettingsPreferenceFragment implements Pref
             key = "demo";
         }
         if (!key.isEmpty()) {
-            String mPkgList = getProp("persist.hyperceiler.crash.report");
+            String mPkgList = getProp("persist.mxg.crash.report");
             if ((boolean) o) {
                 if (mPkgList.isEmpty()) {
                     mPkgList = key;
@@ -75,7 +75,7 @@ public class SafeModeFragment extends SettingsPreferenceFragment implements Pref
             } else {
                 mPkgList = mPkgList.replace("," + key, "").replace(key, "");
             }
-            ShellInit.getShell().run("setprop persist.hyperceiler.crash.report \"" + mPkgList + "\"").sync();
+            ShellInit.getShell().run("setprop persist.mxg.crash.report \"" + mPkgList + "\"").sync();
         }
         return true;
     }

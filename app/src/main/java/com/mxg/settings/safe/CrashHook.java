@@ -271,11 +271,11 @@ public class CrashHook extends HookTool {
     }
 
     private void setCrashRecord(ArrayList<JSONObject> data) {
-        Settings.System.putString(mContext.getContentResolver(), "hyperceiler_crash_record_data", data.toString());
+        Settings.System.putString(mContext.getContentResolver(), "mxg_crash_record_data", data.toString());
     }
 
     private ArrayList<JSONObject> getCrashRecord() {
-        String data = Settings.System.getString(mContext.getContentResolver(), "hyperceiler_crash_record_data");
+        String data = Settings.System.getString(mContext.getContentResolver(), "mxg_crash_record_data");
         if (data == null || data.isEmpty() || data.equals("[]")) {
             return new ArrayList<>();
         }

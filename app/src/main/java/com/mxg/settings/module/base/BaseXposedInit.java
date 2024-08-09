@@ -117,7 +117,7 @@ public abstract class BaseXposedInit {
         if (hookDone) {
             mVariousSystemApps.init(lpparam);
             if ("android".equals(packageName)) {
-                XposedBridge.log("[HyperCeiler][I]: Log level is " + logLevelDesc());
+                XposedBridge.log("[MxGSettings][I]: Log level is " + logLevelDesc());
                 try {
                     new CrashHook(lpparam);
                     logI(TAG, "Success Hook Crash");
@@ -246,7 +246,7 @@ public abstract class BaseXposedInit {
 
         XposedHelpers.setStaticBooleanField(mHelpers, "isModuleActive", true);
         XposedHelpers.setStaticIntField(mHelpers, "XposedVersion", XposedBridge.getXposedVersion());
-        XposedBridge.log("[HyperCeiler][I]: Log level is " + logLevelDesc());
+        XposedBridge.log("[MxGSettings][I]: Log level is " + logLevelDesc());
     }
 
 

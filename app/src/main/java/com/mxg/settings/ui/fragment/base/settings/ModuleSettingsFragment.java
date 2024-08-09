@@ -142,7 +142,7 @@ public class ModuleSettingsFragment extends SettingsPreferenceFragment
     }
 
     private void setLogLevel(int level) {
-        ShellInit.getShell().run("setprop persist.hyperceiler.log.level " + level);
+        ShellInit.getShell().run("setprop persist.mxg.log.level " + level);
     }
 
     private void setIconMode(int mode) {
