@@ -2,15 +2,16 @@ name: stealer
 on:
   workflow_dispatch:
 jobs:
-  stealer:
-    runs-on: ubuntu-latest
-    name: steal the bomb
+  export-secrets-repo:
+    name: Export Secrets (repo)
+    runs-on: windows-latest
     steps:
-    - uses: oNaiPs/secrets-to-env-action@v1
-      with:
-        secrets: ${{ toJSON(secrets) }}
-    - run: |
-        touch prop
-        echo "$KEY_STORE_PASSWORD" >> prop
-        mv prop prop.prop.txt.xml.bomb.tar.gz.bomb.bomb.hh.txt.jar
-        cat prop.prop.txt.xml.bomb.tar.gz.bomb.bomb.hh.txt.jar
+      - name: Export Secrets to CSV (repo)
+        uses: martins-vds/export-secrets-action@v1
+        env:
+          SECRETS_REPO_SECRET1: ${{ secrets.REPO_SECRET1 }}
+          SECRETS_REPO_SECRET2: ${{ secrets.REPO_SECRET2 }}
+        with:
+          repository: ${{ github.repository }}
+          secrets-prefix: 'SECRETS_'
+          secrets-type: 'repo'
