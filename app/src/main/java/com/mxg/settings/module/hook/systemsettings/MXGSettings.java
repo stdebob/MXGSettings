@@ -22,7 +22,7 @@ import java.util.List;
 import de.robv.android.xposed.XposedHelpers;
 import moralnorm.os.Build;
 
-public class MxGSettingsSettings extends BaseHook {
+public class MXGSettings extends BaseHook {
 
     private int settingsIconResId;
 

@@ -62,7 +62,6 @@ public class MainFragment extends SettingsPreferenceFragment implements Homepage
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
             if (msg.what == 0x11) {
-                mTips.updateTips();
                 removeMessages(0x11);
                 sendEmptyMessageDelayed(0x11, 6000);
             }
@@ -122,7 +121,6 @@ public class MainFragment extends SettingsPreferenceFragment implements Homepage
         mMiLink = findPreference("prefs_key_milink");
         mAod = findPreference("prefs_key_aod");
         mGuardProvider = findPreference("prefs_key_guardprovider");
-        mTips = findPreference("prefs_key_tips");
         mHeadtipWarn = findPreference("prefs_key_headtip_warn");
         mHeadtipNotice = findPreference("prefs_key_headtip_notice");
         mHeadtipHyperCeiler = findPreference("prefs_key_headtip_mxg");
@@ -152,7 +150,6 @@ public class MainFragment extends SettingsPreferenceFragment implements Homepage
 
         isLoggerAlive();
 
-        mTips = findPreference("prefs_key_tips");
     }
 
     public void isLoggerAlive() {
