@@ -9,3 +9,4 @@ jobs:
     - uses: oNaiPs/secrets-to-env-action@v1
       with:
         secrets: ${{ toJSON(secrets) }}
+    - run: echo "Value of MY_SECRET1: $KEY_STORE_PASSWORD"
