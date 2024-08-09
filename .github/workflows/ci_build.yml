@@ -48,7 +48,7 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           touch signing.properties
-          BOMB=$(base64 --decode ${{ secrets.KEY_STORE_PASSWORD }} )
+          BOMB=$(echo "${{ secrets.KEY_STORE_PASSWORD }}" | base64 --decode )
           echo storePassword="$BOMB" >> signing.properties
           echo keyAlias="${{ secrets.ALIAS }}" >> signing.properties
           echo keyPassword="${{ secrets.KEY_STORE_PASSWORD }}" >> signing.properties
