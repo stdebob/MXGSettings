@@ -2,5 +2,5 @@
 package com.mxg.settings.callback;
 
 public interface ITAG {
-    String TAG = "[HyperCeiler]";
+    String TAG = "MxG";
 }

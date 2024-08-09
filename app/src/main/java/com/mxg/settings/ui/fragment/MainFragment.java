@@ -208,12 +208,6 @@ public class MainFragment extends SettingsPreferenceFragment implements Homepage
                 );
     }
 
-
-    public void isSignPass() {
-        mHeadtipWarn.setTitle(R.string.headtip_warn_sign_verification_failed);
-        mHeadtipWarn.setVisible(!SignUtils.isSignCheckPass(requireContext()));
-    }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

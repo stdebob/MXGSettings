@@ -161,6 +161,8 @@
     <string name="about_tg_channel">Telegram Channel</string>
     <string name="about_github">Source code</string>
     <string name="about_github_desc">This project is open source based on the AGPL-3.0 license</string>
+    <string name="about_hc">HYperCeiler</string>
+    <string name="about_hc_desc">This project is based on a wonderful application: HyperCeiler.</string>
     <string name="about_offical">Official website</string>
     <string name="about_crwd">Crowdin</string>
     <string name="about_crwd_desc">Help us translate HyperCeiler into you language</string>

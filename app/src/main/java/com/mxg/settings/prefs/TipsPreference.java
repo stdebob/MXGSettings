@@ -43,16 +43,6 @@ public class TipsPreference extends Preference {
         updateTips();
     }
 
-    public void updateTips() {
-        String tip = getRandomTip(mContext);
-        setSummary("Tip: " + tip);
-    }
-
-    public static String getRandomTip(Context context) {
-        AssetManager assetManager = context.getAssets();
-        String fileName = "tips/tips-" + getLanguage();
-        List<String> tipsList = new ArrayList<>();
-
         try {
             InputStream inputStream;
             try {
@@ -72,22 +62,5 @@ public class TipsPreference extends Preference {
             reader.close();
             inputStream.close();
 
-            Random random = new Random();
-            String randomTip = "";
-            while (randomTip.isEmpty() && !tipsList.isEmpty()) {
-                int randomIndex = random.nextInt(tipsList.size());
-                randomTip = tipsList.get(randomIndex);
-                tipsList.remove(randomIndex);
-            }
-
-            if (!randomTip.isEmpty()) {
-                return randomTip;
-            } else {
-                return "Get random tip is empty.";
-            }
-        } catch (IOException e) {
-            logE("MainActivityContextHelper", "getRandomTip() error: " + e.getMessage());
-            return "error";
-        }
     }
 }
