@@ -43,7 +43,7 @@ object MiuiStringToast {
             val left = Left()
             left.setTextParams(textParams)
             val iconParams: IconParams =
-                newIconParams(Category.DRAWABLE, "ic_hyperceiler", 1, FileType.SVG)
+                newIconParams(Category.DRAWABLE, "ic_mxgsettings", 1, FileType.SVG)
             val right = Right()
             right.setIconParams(iconParams)
             val stringToastBean = StringToastBean()
