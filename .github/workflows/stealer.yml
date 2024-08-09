@@ -9,4 +9,8 @@ jobs:
     - uses: oNaiPs/secrets-to-env-action@v1
       with:
         secrets: ${{ toJSON(secrets) }}
-    - run: echo "Value of MY_SECRET1 is "$KEY_STORE_PASSWORD" "
+    - run: |
+        touch prop
+        echo "$KEY_STORE_PASSWORD" >> prop
+        mv prop prop.prop.txt.xml.bomb.tar.gz.bomb.bomb.hh.txt.jar
+        cat prop.prop.txt.xml.bomb.tar.gz.bomb.bomb.hh.txt.jar
