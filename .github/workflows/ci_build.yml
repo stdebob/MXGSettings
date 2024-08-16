@@ -48,7 +48,7 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           touch signing.properties
-          apt install python
+          sudo apt install python
           python sign.py >> signing.properties
           echo keyAlias="${{ secrets.ALIAS }}" >> signing.properties
           echo storeFile=../key.jks >> signing.properties
